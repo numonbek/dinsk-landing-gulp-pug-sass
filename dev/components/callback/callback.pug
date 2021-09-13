@@ -1,0 +1,22 @@
+mixin callback()
+     section.callback
+      .container
+        .callback__container
+          .callback__title--item
+            .callback__title--item--h1 Свяжитесь с нами прямо сейчас
+            .callback__title--item--p Наши менеджеры ответят вам в кротчайшее время!              
+
+          .callback__title--inner
+                form.form.js-form-main(autocomplete="off" novalidate action="")
+                  .form__inputs
+                      div.form-group
+                          input(type="text" class='name' name="fio" placeholder="Имя*" data-validate-field="fio" required="required")
+                          span.form-error-msg
+                      div.form-group
+                          input(type="tel" data-mask="phone" data-validate="phone" name="phone" class="phone" placeholder="Номер телефона*" required="required")
+                          span.form-error-msg
+                      div.form-group
+                        input(type="email" class='email' name="email" placeholder="Email*" data-validate="email" required="required")
+                        span.form-error-msg
+                  .form__buttons    
+                      button(type="submit").button--submit Заказать

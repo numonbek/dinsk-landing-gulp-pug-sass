@@ -1,0 +1,455 @@
+.header{
+    margin: 30px auto 241px auto;
+    width: 100%;
+    
+    height: 64px;
+    // padding: 0 165px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $white;
+
+    &__list{
+        margin-right: 160px;
+        @include screen(1280px+1){
+            margin-right: 100px;
+        }
+        @include screen(1024px+1){
+            margin-right: 25px;
+        }
+
+    }
+    @include screen(1280px+1){
+        margin : 20px 20px 110px 20px;
+        padding-right: 30px;
+    }
+    @include screen(768px+1){
+        margin: 20px 20px 66px;
+        padding-right: 30px;
+    }
+    @include screen(480px+1){
+        margin: 20px 20px 43px;
+        padding-right: 30px;
+    }
+ 
+}
+
+nav ul{ 
+    display: flex;
+    // transform: scale(1);
+    &>li{   
+        &:not(:last-child){
+            margin-right: 30px;
+            @include screen(1280px+1){
+                margin-right: 15px;
+            }
+            @include screen(1024px+1){
+                margin-right: 12px;
+            }
+          
+        }
+        &:hover{
+            transform: translate(-3%, -3%);
+        }
+        a {
+         text-decoration: none;
+         font-family: Open Sans;
+         font-style: normal;
+         font-weight: 600;
+         font-size: 15px;
+         line-height: 20px;
+         letter-spacing: 0.01em;
+         
+         /* Black */
+         transition: color .4s ease;
+       
+         color: #181818;
+         &:hover{
+             
+             color: #519C4F;
+         }
+         @include screen(1024px+1){
+            font-size: 13px;
+               }
+        }
+     
+}
+    
+}
+
+/* ==== HEADER FIXED ====    */
+
+.header_fixed{
+    position: fixed;
+    margin: 0 auto;
+
+    
+   
+    height: 64px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $white;
+    z-index: 1000000;
+    
+    background-color: $white;
+    animation-name: show_header;
+    animation-duration: 1s;
+}
+
+/* ========================= */
+
+.logo{
+    &>img{
+        
+            border-style: none;
+            width: 198px;
+            max-width: none;
+            display: block;
+            
+          
+    }
+    &__icon{
+        transition: all 0.5s ease; ;
+        &:hover{
+            opacity: 0.8;
+            cursor: pointer;
+        }
+    }
+}
+
+.nav{
+    display: flex;
+    // flex-wrap:wrap;
+    align-items: center;
+    
+    &__item{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.4s ease;
+        // transform: scale(2);
+        transform: translate(0%, 0%);
+        &:not(:last-child){
+            margin-right: 37px
+        }
+        &:hover{
+            
+            // transform: scale(1.1);
+            transform: translate(-5%, -5%) ;
+            color: $green;
+        }
+    }
+}
+
+.info{
+
+    &__item{
+        display: flex;
+        cursor: pointer;
+        
+        &:not(:last-child){
+            margin-bottom: 8px;
+        }
+     
+       
+    }
+
+    &__icon{/* == or can you use ::before === */
+        margin-right: 6px;
+         &--svg{
+             width: 24px;
+             height: 24px;
+             @include screen(1024px+1){
+                 width: 17px;
+                 height: 17px;
+             }
+         }
+    }
+    
+
+    &__number{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 21.79px;
+        transition: color .6s ease;
+        @include screen(1024px+1){
+            font-size: 12px;
+        }
+        &:hover{
+            color: $green;
+            
+        }
+    }
+
+}
+
+
+.containerr{
+    margin: 0 auto;
+    max-width: 1420px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* === burger menu === */
+.header__hamburger{
+    display: none;
+}
+
+@media (max-width: 768px){
+    body.lock{
+        overflow: hidden;
+    }
+    .info{
+        margin-left: 32px;
+    }
+    .header__hamburger{
+        display: block;
+        width: 32px;
+        height: 32px;
+        background: transparent;
+        border: transparent;
+        z-index: 1000;
+        transform: rotateY(180deg);
+
+        span{
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: #3B7B3A;
+            position: relative;
+            box-shadow:0 2px 10px #00000030
+        }
+        span+span{
+            margin-top: 7px;
+        }
+
+        span:nth-child(1){
+            animation: ease 0.5s top-back forwards;
+        }
+        span:nth-child(2){
+            animation: ease 0.5s middle-back forwards;
+        }
+        span:nth-child(3){
+            animation: ease 0.5s bottom-back forwards;
+        }
+    }
+   .header{
+
+       &_fixed{
+        height: 81px;
+        margin-top: 0;
+       }
+        margin-top: 18px;
+        
+        
+        &__menu{
+            display: block;
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            left: 100%;
+            top: 0;
+            background: #fff;
+            transition: left 0.5s ease;
+            overflow: auto;
+            align-items: center;
+            
+            
+        }
+        &__list{
+            display: block;
+            padding-left: 30px;
+            padding-top: 118px;
+            margin-bottom: 40px;
+            li{
+                margin-bottom: 28px;
+                a{
+                    font-family: Open Sans;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 15px;
+                    line-height: 20px;
+                    letter-spacing: 0.01em;
+                    
+                    /* Black */
+                    
+                    color: #181818;
+                    &:hover{
+                       
+                        color: #519C4F;
+                    }
+                }
+               
+            }
+        }
+      
+   }
+   .activebuger{
+    @include screen(768px) {
+       
+    }
+    
+       
+       .logo{
+        z-index: 2;
+       }
+       .header__menu{
+           left: 0;
+           z-index: 1;
+       }
+       .header__hamburger{
+           span:nth-child(1){
+               animation: ease 0.5s top forwards;
+           }
+           span:nth-child(2){
+            animation: ease 0.5s middle forwards;
+           }
+           span:nth-child(3){
+            animation: ease 0.5s bottom forwards;
+           }
+       }
+
+       
+   }
+   .content{
+       padding-top: 85;
+   }
+  
+}
+
+
+
+
+/* ============================= */
+@keyframes show_header{
+    0%{
+        opacity: 0 ;
+        top: -70px;
+    }
+    100%{
+        opacity: 1;
+        top: 0;
+    }
+}
+
+
+/* ==== burger animation ==== */
+
+
+$top: 10px;
+$middle: 7px;
+$bottom: 4px;
+
+@keyframes top{
+    0%{
+        width: 100%;
+        transform: scale(-1, 1)
+    }
+    50%{
+        width: 98%;
+        transform: scale(-1, 1)
+       
+    }
+    100%{
+        width: 95%;
+        transform: scale(-1, 1)
+    }
+
+}
+
+@keyframes top-back{
+    0%{
+        width: 95%;
+        
+  
+    }
+    50%{
+        width: 98%;
+        
+    }
+    100%{
+        width: 100%;
+        
+    }
+
+}
+
+/* middle */
+
+@keyframes middle{
+    0%{
+        width: 100%;
+        
+  
+    }
+    50%{
+        width: 80%;
+       
+    }
+    100%{
+        width: 70%;
+        
+    }
+
+}
+
+@keyframes middle-back{
+    0%{
+        width: 70%;
+        
+  
+    }
+    50%{
+        width: 80%;
+        
+    }
+    100%{
+        width: 100%;
+        
+    }
+
+}
+
+/*====== bottom ===== */
+
+@keyframes bottom{
+    0%{
+        width: 100%;
+        
+  
+    }
+    50%{
+        width: 60%;
+        
+    }
+    100%{
+        width: 30%;
+        
+    }
+
+}
+
+@keyframes bottom-back{
+    0%{
+        width: 30%;
+        
+    }
+    50%{
+        
+        width: 60%;
+        
+    }
+    100%{
+        width: 100%;
+        
+    }
+
+}

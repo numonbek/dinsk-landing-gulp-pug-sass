@@ -1,0 +1,47 @@
+mixin slideshow()
+    section.slideshow
+      .slideshow__container
+        .mySlides.fade
+            img(src="../static/img/content/slides/Lam0.jpg" width='100%' )
+        .mySlides.fade   
+            img(src="../static/img/content/slides/Lam1.jpg" width='100%')
+        .mySlides.fade   
+            img(src="../static/img/content/slides/Lam2.jpg" width='100%')
+        .mySlides.fade    
+            img(src="../static/img/content/slides/Lam3.jpg" width='100%')
+        .mySlides.fade
+            img(src="../static/img/content/slides/Lam4.jpg" width='100%')
+        .mySlides.fade
+            img(src="../static/img/content/slides/Lam5.jpg" width='100%')
+        .mySlides.fade
+            img(src="../static/img/content/slides/Lam6.jpg" width='100%')
+        .mySlides.fade
+            img(src="../static/img/content/slides/Lam7.jpg" width='100%')
+
+      .slideshow__item
+        .slideshow__row
+          .slideshow__row--column
+            img(src="../static/img/content/slides/Lam0.jpg" width='100%' class="demo cursor" onclick="currentSlide(1)")
+          .slideshow__row--column  
+            img(src="../static/img/content/slides/Lam1.jpg" width='100%' class="demo cursor" onclick="currentSlide(2)")
+          .slideshow__row--column
+            img(src="../static/img/content/slides/Lam2.jpg" width='100%' class="demo cursor" onclick="currentSlide(3)")
+          .slideshow__row--column
+            img(src="../static/img/content/slides/Lam3.jpg" width='100%' class="demo cursor" onclick="currentSlide(4)")
+          .slideshow__row--column
+            img(src="../static/img/content/slides/Lam4.jpg" width='100%' class="demo cursor" onclick="currentSlide(5)")
+          .slideshow__row--column
+            img(src="../static/img/content/slides/Lam5.jpg" width='100%' class="demo cursor" onclick="currentSlide(6)")
+          .slideshow__row--column
+            img(src="../static/img/content/slides/Lam6.jpg" width='100%' class="demo cursor" onclick="currentSlide(7)")
+          .slideshow__row--column
+            img(src="../static/img/content/slides/Lam7.jpg" width='100%' class="demo cursor" onclick="currentSlide(8)")
+          
+        .slideshow__touch
+          a.prev(onclick="plusSlides(-1)")
+            .arrow__center
+              +icon("arrow-left")
+          
+          a.next(onclick="plusSlides(1)")
+            .arrow__center
+              +icon("arrow-right")

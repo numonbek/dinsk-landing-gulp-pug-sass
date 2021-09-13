@@ -1,0 +1,228 @@
+.callback{
+    // height: 426px;
+    width: 100%;
+    background-color: $green;
+    // margin-bottom: 180px;
+    padding-bottom: 28px;
+    @include screen(320px+1){
+        padding: 0;
+    }
+    &__container{
+        margin: 0 auto;
+        max-width: 1348px;
+        // margin: 110px auto 83.77px auto;
+        @include screen(1280px+1){
+            padding: 0 35px;
+        }
+        @include screen(320px+1){
+            padding: 0 12px;
+            max-width: 320px;
+        }
+    }
+    
+
+}
+
+/* == FORM == */
+
+form{
+    color: white;
+      
+}
+
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 83.77px;
+    &__buttons{
+        margin: 0 auto;
+    }
+    &__inputs{
+        margin-bottom: 30px;
+        text-align: center;
+        display: flex;
+        @include screen(1280px+1){
+            margin: 0 auto 30px auto;
+        }
+        @include screen(1024px+1){
+            margin: 0 auto 40px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    }
+    @include screen(1024px+1){
+        padding-bottom: 34.77px;
+    }
+    @include screen(320px+1){
+        padding-bottom: 51px;
+    }
+}
+
+
+.form input {
+    background-color: initial;
+    color: white;
+    width: 325px;
+    height: 59px;    
+    border: 0;
+    padding: 0;
+    border-radius: 0;
+    border-bottom: 2px solid #FAFAFA;
+    opacity: 0.7;
+    margin-right: 44px;
+    @include screen(1024px+1){       
+        width: 276px;
+        height: 56px;      
+        margin-right: 36px;
+    }
+    @include screen(480px+1){       
+        width: 400px;
+        height: 56px;      
+        margin-right: 36px;
+    }
+    @include screen(320px+1){       
+        width: 300px;
+        height: 59px;
+        margin-right: 36px;
+    }
+    
+}
+input:focus, textarea:focus {
+    outline:none;
+}
+input::placeholder {
+    color: #FAFAFA;
+    // left: calc(50% - 122px/2 - 4px);
+    // top: calc(50% - 16px/2);
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+    opacity: 0.7;
+}
+
+input {outline:none;}
+
+button{
+    &.button--submit{
+      width: 220px;
+      height: 60px;
+      background: #FAFAFA;
+      border-radius: 5px;
+      border: 0;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 24px;
+      /* identical to box height, or 133% */
+    //   display: flex;
+      align-items: center;
+      text-align: center;
+      letter-spacing: -0.154px;
+      color: #3B7B3A;
+      cursor: pointer;
+    //   transition: all 0.1s ease;
+      &:hover{
+        transition: all 0.3s linear;
+        background-color: #3B7B3A ;
+        color: white;
+      }
+      @include screen(1024px+1){
+        width: 204px;
+        height: 54px;
+      }
+      @include screen(480px+1){
+        width: 400px;
+        height: 54px;
+      }
+      @include screen(320px+1){
+        width: 300px;
+        height: 60px;
+      }
+    }
+
+}
+
+
+/* === callback--title === */
+
+.callback__title--item{
+    padding-top: 110px;
+    &--h1{
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 44px;
+        line-height: 120%;
+        /* identical to box height, or 53px */
+        text-align: center;
+        color: #FAFAFA;
+        @include screen(1024px+1) {
+            font-size: 37px;
+        }
+        @include screen(320px+1) {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 28px;
+            line-height: 120%;
+            text-align: center;
+            letter-spacing: -0.24px;
+            color: #FAFAFA;
+        }
+       
+    }
+    &--p{
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 150%;
+        /* identical to box height, or 24px */
+        text-align: center;
+        color: #FAFAFA;
+        opacity: 0.8;
+        padding-top: 28px;
+        margin-bottom: 40px;
+        @include screen(480px+1) {
+            font-size: 21px;
+        }
+        @include screen(320px+1){
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 150%;
+            text-align: center;
+            letter-spacing: 0.01em;
+            color: #FAFAFA;
+            opacity: 0.8;
+            padding-top: 20px;
+            margin-bottom: 6px;
+        }
+    }
+    @include screen(1024px+1) {
+        padding-top: 69px;
+    }
+    @include screen(320px+1) {
+        padding-top: 52px;
+    }
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+   
+.form-error-msg{
+    color: #F31919;
+    opacity: 0.87;
+    border-color: red;
+}
+form .form-error-border{
+    border-bottom: 1px solid red;
+}
+

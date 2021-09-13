@@ -1,0 +1,250 @@
+.services{
+    margin: 0 auto;
+    &__container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include screen(1280px+1){
+            padding: 0 20px;
+        }
+        @include screen(1280px+1){
+            flex-wrap: nowrap;
+        }
+        @include screen(480px+1){
+            flex-wrap: wrap;
+        }
+        @include screen(320px+1){
+            flex-wrap: wrap;
+            padding: 0px 6px;
+        }
+    }
+    &__delivery{
+        &-car{
+            text-align: center;
+            margin-bottom: 44px;
+            @include screen(1024px+1){
+                margin-bottom: 10px;
+            }
+            @include screen(480px+1){
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &__pay{
+        &-money{
+            text-align: center;
+            margin-bottom: 44px;
+            @include screen(1024px+1){
+                margin-bottom: 10px;
+            }
+            @include screen(480px+1){
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+
+
+.icon-delivery-truck{
+    fill: $green;
+    max-width: 153px;
+    max-height: 153px;
+    &:hover{
+        fill:red;
+    }
+    @include screen(1024px+1){
+        max-width: 120px;
+        max-height: 120px;    
+    }
+    @include screen(768px+1){
+        max-width: 100px;
+        max-height: 100px;    
+    }
+    @include screen(480px+1){
+        max-width: 82px;
+        max-height: 82px;    
+    }
+}
+
+.icon-group-pay{
+    fill: $green;
+    max-width: 153px;
+    max-height: 153px;
+    &:hover{
+        fill:red;
+    }
+    @include screen(1024px+1){
+        max-width: 120px;
+        max-height: 120px;    
+    }
+    @include screen(1024px+1){
+        max-width: 100px;
+        max-height: 100px;    
+    }
+    @include screen(480px+1){
+        max-width: 82px;
+        max-height: 82px;    
+    }
+}
+
+
+/* ============== */
+
+.cm{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 110%;
+    /* or 13px */
+    align-items: center;
+    text-align: center;
+    letter-spacing: 2.26px;
+    text-transform: uppercase;
+    /* Black */
+    color: #181818;
+    @include screen(1024px+1){      
+        font-size: 9px;
+        line-height: 104%;      
+    }
+    @include screen(768px+1){      
+        margin-bottom: 20px;    
+    }
+    @include screen(320px+1){
+        
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 110%;
+     
+        align-items: center;
+        text-align: center;
+        letter-spacing: 2.26px;
+        text-transform: uppercase;
+        color: #181818;
+        line-height: 104%;
+     }
+  
+}
+.ct{   
+    max-width: 640px;
+    height: 106px;
+    /* H2 */
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 120%;
+    /* or 53px */
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #262626;
+    @include screen(1024px+1){
+        max-width: 462px;
+        height: 79px;       
+        font-size: 31px;
+        line-height: 113%;        
+        margin-bottom: 10px;
+    }
+    @include screen(768px+1){      
+        margin-bottom: 20px;  
+        height: 79px;
+        font-size: 24px;
+        line-height: 99%;
+        margin-bottom: -8px;  
+    }
+    @include screen(480px+1){      
+        height: 73px;
+        font-size: 29px;
+        line-height: 99%;
+        margin-bottom: 12px;
+    }
+    @include screen(320px+1){      
+        margin: 0 0 20px 0;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: -0.24px;
+        color: #262626;
+        padding: 0 12px;
+        height: 100%;
+    }
+}
+
+#cd{
+    
+    max-width: 640px;
+    height: 162px;
+    padding: 0;    
+    /* TXT */    
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    /* or 27px */    
+    text-align: center;
+    letter-spacing: 0.01em;    
+    /* Black */    
+    color: #181818;    
+    opacity: 0.8;
+    @include screen(1024px+1){
+        max-width: 447px;
+        height: 162px;       
+        font-size: 13px;
+        line-height: 150%;      
+        margin: 0 auto;
+    }
+    @include screen(768px+1){        
+        height: 109px;
+        font-size: 10px;
+    }
+    @include screen(480px+1){        
+        height: 100%;
+        font-size: 14px;
+        padding-bottom: 10px;
+    }
+    @include screen(320px+1){
+        height: 100%;        
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 150%;
+        text-align: center;
+        letter-spacing: 0.01em;
+        width: 311px;
+        color: #181818;
+        opacity: 0.8;
+        padding: 0 11px;
+     }
+}
+
+#ci{
+    margin: 0 auto 180px;
+    @include screen(1280px+1){
+        margin: 0 auto 110px;
+        margin: 0 auto 82px;
+        max-width: 567px;
+        text-align: center;
+        padding: 15px;
+    }
+    @include screen(1024px+1){
+        margin: 0 auto 26px;
+        max-width: 567px;
+    }
+    @include screen(480px+1){
+        margin: 0 auto 26px;
+        max-width: 433px;
+    }
+    @include screen(320px+1){
+        margin: 0 auto 26px;
+        max-width: 433px;
+        padding: 0;
+    }
+}

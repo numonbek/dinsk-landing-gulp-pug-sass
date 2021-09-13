@@ -1,0 +1,60 @@
+extends ../layouts/main
+
+block variables
+  -var title = 'Динская мешкотара'
+
+block content
+  main.main   
+    .firstpage
+      .firstpage__item
+        .firstpage__item--text Динская фабрика мешкотары
+        .firstpage__item--description Мы более десяти лет  занимаемся изготовлением и реализацией мешков из  полипропилена и бумаги. Наши специалисты окажут вам полное содействие в приобретении продукции, обеспечат понимание ваших потребностей и желаний, организуют доставку  по  Краснодарском  и Ставропольском краю.
+        button.firstpage--button Заказать
+      .firstpage__photo
+        img(src='../static/img/common/bag-main.png')  
+    
+
+    include ../../components/catalogs/catalogs
+    +catalogs()
+
+    include ../../components/propilbags/propilbags
+    +propilbags()
+
+    include ../../components/cartonbags/cartonbags
+    +cartonbags()
+      
+    include ../../components/production/production
+    +production()
+
+
+    include ../../components/slideshow/slideshow
+    +slideshow()
+    
+
+    include ../../components/productinfo/productinfo
+    +productinfo()
+    
+    include ../../components/services/services
+    +services()
+
+    
+    include ../../components/ourcertificate/ourcertificate
+    +ourcertificate()
+
+    include ../../components/callback/callback
+    +callback() 
+         
+
+          
+      
+      
+                   
+         
+
+
+
+   
+    
+
+
+

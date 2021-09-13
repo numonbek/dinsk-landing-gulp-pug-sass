@@ -1,0 +1,59 @@
+.cartonbags{
+    max-width: $content;
+    margin: 0 auto 180px auto;
+    @include screen(768px+1){
+        max-width: 1420px;
+        margin: 0 auto 100px;    
+    }
+    @include screen(320px+1){
+        max-width: 1420px;
+        margin: 0 auto 56px;  
+    }
+
+    
+    &__item{
+        text-align: center;
+        
+        &__title{
+            font-family: 'Open Sans', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #519C4F;
+            margin-bottom: 24px;
+            @include screen(320px+1){
+                font-family: 'Open Sans',sans-serif;
+                /* font-size: 32px; */
+                font-weight: 700;
+                color: #519c4f;
+                margin-bottom: 20px;
+                font-size: 18px;
+                line-height: 137.5%;
+                letter-spacing: -0.24px;
+            }
+        }
+        &__describtion{
+            max-width: 551px;
+            margin: 0 auto 38px auto;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            @include screen(320px+1){
+                max-width: 320px;
+                margin: 0px 19px 28px;
+                font-family: 'Open Sans',sans-serif;
+                /* font-size: 18px; */
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                text-align: center;
+                letter-spacing: 0.01em;
+            }
+
+        }
+        &__table{
+            max-width: 673px;
+            margin: 0 auto;
+        }
+    }
+   
+}

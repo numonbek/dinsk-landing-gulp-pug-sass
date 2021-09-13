@@ -1,0 +1,150 @@
+.catalogs{
+    max-width: 1420px;
+    margin: 0 auto 82px auto;
+    width:100%;
+    @include screen(1024px+1){
+        margin: 0 auto 50px;
+    }
+    @include screen(480px+1){
+        margin: 0 auto 50px;
+        
+    }
+    @include screen(320px+1){
+        margin: 0 auto 32px;
+        
+    }
+ 
+    &__item{        
+        margin: 0 auto 82px auto;
+        max-width: 621px;        
+        text-align: center;
+        @include screen(1024px+1){
+            margin: 0 auto 57px;           
+        }
+        @include screen(320px+1){
+            margin: 0 auto 30px;           
+        }
+        &--main{
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 110%;
+            /* or 13px */          
+            align-items: center;
+            text-align: center;
+            letter-spacing: 2.26px;
+            text-transform: uppercase;            
+            /* Black */
+            color: #181818;
+            margin-bottom: 13px;
+            @include screen(1024px+1){
+                font-size: 9px;
+                line-height: 69%;
+                margin-bottom: 4px;
+            }
+            @include screen(320px+1){
+                font-size: 12px;
+                line-height: 110%;
+                margin-bottom: 13px;
+            }
+            
+        }
+        &--title{
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 44px;
+            line-height: 120%;
+            /* identical to box height, or 53px */            
+            letter-spacing: 0.01em;            
+            color: #151515;            
+            margin-bottom: 32px;
+            @include screen(1024px+1){
+                font-size: 35px;
+                letter-spacing: .01em;
+                color: #151515;
+                margin-bottom: 13px;
+            }
+            @include screen(320px+1){
+                font-size: 20px;
+                line-height: 130%;
+                margin: 0 70px;
+            }
+
+        }
+        &--description{
+           
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 150%;
+            /* or 27px */            
+            letter-spacing: 0.01em;
+            /* Black */
+            color: #181818;
+            opacity: 0.8;
+            padding: 0 28.5px;
+
+            @include screen(1024px+1){           
+                font-size: 16px;
+                line-height: 142%;             
+                opacity: .8;
+                padding: 0px 67.5px;
+            }
+            @include screen(320px+1){           
+                font-size: 16px;
+                line-height: 150%;
+                opacity: .8;
+                padding: 0px 9.5px;
+            }
+        }
+    }
+    
+
+}
+/* ==== Bags photo ==== */
+
+.bags-item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include screen(1280px+1){
+        padding: 0 20px;
+    }
+    @include screen(320px+1){
+        padding: 0;
+    }
+    &__block {
+        width: calc(33% - 9px);
+        background: #6FBA6D;
+        height: 518px;
+        border-radius: 10px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        &>img{
+            @include screen(1024px+1){
+                max-width: 69%;
+            }
+        }
+        @include screen(1024px+1){
+            height: 360px;
+            padding: 30px;
+        }
+        @include screen(768px+1){
+            height: 291px;
+            padding: 30px;
+        }
+        @include screen(480px+1){
+            height: 159px;
+            padding: 30px;
+        }
+        @include screen(320px+1){
+            max-height: 116px;
+            padding: 15px;
+        }
+    }
+  
+}

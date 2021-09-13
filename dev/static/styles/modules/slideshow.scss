@@ -1,0 +1,256 @@
+.slideshow{
+    max-width: $content;
+    margin: 0 auto 180px auto;
+    padding: 0 120px;
+    @include screen(1024px+1){
+        margin: 0 auto 110px auto;
+    }
+    @include screen(1024px+1){
+        margin: 0px auto 80px;
+        padding: 0px 86px;
+    }
+    @include screen(480px+1){
+        margin: 0 auto 39px;
+        padding: 0px 26px;
+    }
+    /* Расположите контейнер изображения (необходимо расположить стрелки влево и вправо) */
+    &__container {       
+        // position: relative;
+        margin: 0 auto 24px auto;
+        @include screen(480px+1){
+            margin: 0 auto 26px;
+        }
+    }
+
+}
+/* Скрыть изображения по умолчанию */
+.mySlides {
+    display: none;
+
+    & img{
+        border-radius: 10px;
+        width: 100% ;
+        max-height: 551px;
+        
+    }
+}
+
+/* Добавить указатель при наведении на миниатюры изображений */
+.cursor {
+    cursor: pointer;
+}
+
+
+.slideshow__touch{
+    // position: relative;
+    width: 153px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // max-width: 13px;
+    @include screen(768px+1){
+        width: 200px;
+    }
+    @include screen(480px+1){
+        margin: 0 auto;
+        width: 155px;
+    }
+
+    
+}
+
+/* Вперед и предыдущие кнопки */
+.prev,
+.next {
+    cursor: pointer;
+    /* width: auto; */
+    padding: px;
+    /* padding: 10px; */
+    color: #fff;
+    font-weight: 700;
+    border-radius: 50%;
+    background: rgba(24,24,24,.1);
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    /* align-items: center; */
+    /* vertical-align: middle; */
+    /* margin: 10px; */
+    height: 66px;
+    width: 66px;
+    @include  screen(768px+1){
+        height: 40px;
+        width: 40px;
+    }
+    @include  screen(480px+1){
+        height: 67px;
+        width: 67px;
+    }
+   
+}
+
+/* Позиция "next кнопка" на право */
+.next {
+    // right: 0;
+    // border-radius: 3px 0 0 3px;
+}
+
+/* При наведении курсора добавьте черный цвет фона с небольшим количеством прозрачного */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    background-color: $green;
+    .arrow__center{
+        .icon-arrow-left, .icon-arrow-right{
+            fill: white;
+        }
+     
+        
+    }
+  
+}
+.icon-arrow-left:hover{
+    fill: white;
+}
+
+
+
+.slideshow__item{
+    display: flex;
+    justify-content: space-between;
+    max-height: 120px;
+   
+    
+   
+}
+
+.slideshow__row{
+    display: flex;
+    max-width: 960px;
+    @include screen(1280px+1){
+        max-width: 860px;
+    }
+    @include screen(768px+1){
+        max-width: 811px;
+        margin-right: 20px;
+    }
+    @include screen(480px+1){
+        max-width: 811px;
+        margin-right: 20px;
+        display: none;
+    }
+    
+}
+
+
+
+
+/* Шесть колонн бок о бок */
+.slideshow__row--column {
+       background-position: 50% 100%;
+    // float: left;
+    & img{
+       
+        width: 123px;
+        height: 123px;
+        border-radius: 5px;
+        padding: 0;
+        margin: 0;
+        
+      
+       
+        @include screen(1280px+1){
+            max-height: 100px;
+        }
+         
+        @include screen(768px+1){
+            max-height: 60px;
+            
+        }
+       
+    }
+    
+    &:not(:last-child){
+        margin-right: 20px;
+    }
+  
+}
+
+/* Добавить эффект прозрачности для миниатюрных изображений */
+.demo {
+    opacity: 0.6;
+    transition: background-color 0.6s ease;
+    
+}
+
+.active,
+.demo:hover {
+    opacity: 1; 
+}
+
+.active{
+    border: 3px solid #6FBA6D;
+    background: #EECEB5;
+    z-index: 1;
+    
+}
+
+/* icons arrow */
+
+
+.icon-arrow-left{
+    max-width: 22px;
+    max-height: 22px;
+    fill: #181818;
+}
+
+.icon-arrow-right{
+    max-width: 22px;
+    max-height: 22px;
+    fill: #181818;
+}
+   
+
+
+.arrow__center{
+    padding:21px;
+    @include screen(768px+1){        
+            padding: 8px;           
+            padding-left: 10px;        
+    }
+    @include screen(768px+1){        
+       padding: 21px;    
+    }
+    
+}
+
+
+
+
+.fade {
+    /* Animation support for different browsers */
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@-webkit-keyframes fade {
+    from {
+      opacity: .4
+    }
+  
+    to {
+      opacity: 1
+    }
+}
+  
+@keyframes fade {
+    from {
+      opacity: .4
+    }
+  
+    to {
+      opacity: 1
+    }
+}
+

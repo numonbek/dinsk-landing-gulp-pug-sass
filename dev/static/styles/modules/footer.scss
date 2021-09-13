@@ -1,0 +1,312 @@
+.footer{
+    display:flex;
+    @include screen(480px+1){
+        flex-wrap:wrap-reverse;
+        height: 100%;
+    }
+    @include screen(320px+1){
+        flex-wrap:wrap-reverse;
+        height: 100%;
+    }
+    // &:first-child{
+    //     height: 231px;
+    // }
+    &__container{
+        max-height: 676px;
+        width: 100%;
+        background: rgba(24, 24, 24, 0.05);
+        
+        // &--bottom{
+        //     flex-wrap: wrap;
+        // }
+        &--info{
+            // align-items: center;
+            margin: 60px auto 62px 88px;
+            @include screen(768px+1){
+                margin: 31px auto 28px 24px;
+            }
+            @include screen(320px+1){
+                margin: 52px 12px 46px 12px;
+            }
+            &--address h1{
+                font-family: Open Sans;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 28px;
+                line-height: 120%;
+                /* identical to box height, or 34px */
+                // text-align: center;
+                letter-spacing: 0.01em;
+                margin-bottom: 41px;    
+                color: #262626;
+                @include screen(768px+1){
+                    margin-bottom: 22px;
+                }
+                @include screen(320px+1){
+                    margin-bottom: 24px;                   
+                    font-family: Open Sans;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 20px;
+                    line-height: 130%;
+                    text-align: center;
+                    letter-spacing: -0.24px;
+                    color: #262626;
+                }
+            }
+            &--address p.comp-name{
+                font-family: Open Sans;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 120%;
+                /* or 19px */
+
+                letter-spacing: 0.01em;
+
+                color: #262626;
+                margin-bottom: 20px;
+                @include screen(320px+1){
+                    font-family: Open Sans;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 16px;
+                    line-height: 120%;
+                    letter-spacing: 0.01em;
+                    color: #262626;
+                    margin-bottom: 12px;
+                    text-align: center;
+                }
+            }
+            &--address p.comp-address{
+                font-family: Open Sans;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 150%;
+                /* identical to box height, or 27px */
+                letter-spacing: 0.01em;
+                /* Black */
+                color: #181818;
+                opacity: 0.7;
+                margin-bottom: 48px;
+                @include screen(768px+1){
+                    margin-bottom: 31px;
+                }
+                @include screen(320px+1){
+                    font-family: Open Sans;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 150%;
+                    text-align: center;
+                    letter-spacing: 0.01em;
+                    color: #181818;
+                    opacity: 0.8;
+                    margin-bottom: 24.5px;
+                }
+            }
+        }
+       
+    }
+   
+   
+}
+
+
+.contacts{
+    &__mail{
+        display: flex;
+        @include screen(320px+1){
+            justify-content: center;
+        }
+        &--email{
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 120%;
+            /* or 26px */
+            
+            letter-spacing: 0.01em;
+            
+            /* Black */
+            
+            color: #181818;
+        }
+    }
+    &__telephone{
+        display: flex;
+        @include screen(320px+1){
+            justify-content: center;
+        }
+        &--number{
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 120%;
+            /* or 26px */
+            
+            letter-spacing: 0.01em;
+            
+            /* Black */
+            
+            color: #181818;
+        }
+    }
+    
+}
+
+
+
+.footer__container--info--time{
+    padding-top: 40px;
+    @include screen(768px+1){
+        padding-top: 10px;
+    }
+    & h1{
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 120%;
+        /* identical to box height, or 34px */        
+        letter-spacing: 0.01em;
+        margin-bottom: 48px;
+        color: #262626;
+        @include screen(768px+1){
+            margin-bottom: 20px;
+        }
+        @include screen(320px+1){
+            margin-bottom: 24px;
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 130%;
+            text-align: center;
+            letter-spacing: -0.24px;
+            color: #262626;
+        }
+    }
+    & p.pd-pt{
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 150%;
+        /* identical to box height, or 27px */
+        letter-spacing: 0.01em;
+        /* Black */
+        color: #181818;
+        margin-bottom: 20px;
+        opacity: 0.7;
+        @include screen(768px+1){
+            margin-bottom: 8px;
+        }
+        @include screen(320px+1){
+            margin-bottom: 12px;
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 150%;
+            text-align: center;
+            letter-spacing: 0.01em;
+            color: #181818;
+            opacity: 0.8;
+        }
+    }
+    & p.cb{
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 150%;
+        /* identical to box height, or 27px */
+        letter-spacing: 0.01em;
+        /* Black */
+        color: #181818;
+        opacity: 0.7;
+        @include screen(320px +1){
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 150%;
+            text-align: center;
+            letter-spacing: 0.01em;
+            color: #181818;
+            opacity: 0.8;
+        }
+    }
+}
+
+
+
+
+.icon{
+    &-mail{
+        fill: $green;
+        max-width: 24px;
+        max-height: 24px;
+        margin-right: 17px;
+        margin-bottom: 28px;
+    }
+    &-call{
+        fill: $green;        
+        max-width: 24px;
+        max-height: 24px;
+        margin-right: 17px;
+        margin-bottom: 28px;
+    }
+}
+
+.icon-logo-comp{
+    fill: white;
+    max-width: 73.36px;
+    height: 79px; 
+    margin-left: 15px;
+    @include screen(768px+1){
+        max-width: 73.36px;
+        height: 35px;
+        
+    }
+}
+
+.footer__bottom{
+    
+    flex-wrap: wrap;
+    max-height: 79px;   
+    background-color: black;
+    @include screen(768px+1){
+        max-height: 160px;
+    }
+    &--aboutus{
+        color: white;
+        opacity: 0.6;
+        @include screen(768px+1){
+            margin-top: 20px;
+        }
+    }
+}
+.footer__container--bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width:$content;
+    margin: 0 auto;
+    @include screen(1280px+1){
+        padding: 0 25px;
+    }
+    @include screen(768px+1){
+        display:block;
+        height: 144px;
+        text-align: center;
+        padding: 0 10px;
+    }
+}
+
+
+

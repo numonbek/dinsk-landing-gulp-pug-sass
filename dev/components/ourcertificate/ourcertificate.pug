@@ -1,0 +1,16 @@
+mixin ourcertificate()
+    section.ourcertificate
+      .container
+        .ourcertificate__title  Наши сертификаты
+        .ourcertificate__photo
+          .ourcertificate__photo-column
+              img(src="../static/img/content/certificate/certificate01.jpg" alt="My workspace" id="myImg")
+          .ourcertificate__photo-column
+              img(src="../static/img/content/certificate/certificate02.jpg" alt="My workspace" id="myImg1")
+          .ourcertificate__photo-column
+              img(src="../static/img/content/certificate/certificate03.jpg" alt="My workspace" id="myImg2")
+          
+      .modal#myModal
+            span(class="close" onclick="document.getElementById('myModal').style.display = 'none'") 
+              .close__element &times;
+              img(src='' class="modal-content" id="img01")

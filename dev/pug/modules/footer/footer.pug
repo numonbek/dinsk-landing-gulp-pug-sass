@@ -1,0 +1,35 @@
+footer.footer
+
+  script(type="text/javascript" charset="utf-8" async src=`https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4a74f972a9c077531d14f30681dcca906ae24f8f4feb1f306985940abb194981&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true`).heightmap
+  .footer__container             
+        .footer__container--info
+            .footer__container--info--address
+                h1 Контакты
+                p.comp-name Динская фабрика мешкотары
+                p.comp-address Краснодарский край, ст. Динская, Шевченко, д. 111
+            .footer__container--info--contacts
+                .contacts__mail 
+                   .contacts__mail--icon 
+                        +icon('mail')
+                   .contacts__mail--email 3375822@mail.ru
+                .contacts__telephone
+                    .contacts__telephone--icon
+                        +icon('call')
+                    .contacts__telephone--number +7 898 54 54 877
+                .contacts__telephone
+                    .contacts__telephone--icon
+                        +icon('call')
+                    .contacts__telephone--number +7 903 454-33-01    
+            .footer__container--info--time
+                h1 Режим работы
+                p.pd-pt Понедельник-пятница с 8:00 до 18:00
+                p.cb Суббота с 8:00 до 17:00
+
+            
+
+section.footer__bottom
+   .footer__container--bottom     
+        .footer__bottom--aboutus  Политика конфиденциальности      
+        .footer__bottom--aboutus  © 2021 ДИФАМ. Все права сайта защищены      
+        .footer__bottom--aboutus  Разработано  
+            +icon('logo-comp')     

@@ -1,0 +1,80 @@
+.propilbags{
+    max-width: $content;
+    margin: 0 auto;
+    margin-bottom: 82px;
+    @include screen(320px+1){
+        margin: 0 auto 32px;
+    }
+    &__title{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 38px;
+        color: #519C4F;
+        text-align: center;
+        margin-bottom: 38px;
+        @include screen(480px+1){           
+            font-size: 26px;          
+            text-align: center;
+            width: 375px;
+            margin: 0 auto 38px auto;
+        }
+        @include screen(320px+1){           
+            font-size: 18px;
+            text-align: center;
+            width: 100%;
+            margin: 0 36px 28px;
+            line-height: 137.5%;
+        }
+    }
+    
+}
+
+tr{
+    &:nth-child(2n+1) {background-color: $grey;}
+}
+
+.bags__table{
+    width: 100%;
+    align-items: center;
+    text-align: center;  
+}
+.bags__main{
+   height: 127px;
+    /* tr */
+   
+    @include screen(320px+1){ 
+        height: 57px;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 150%;
+        letter-spacing: 0.01em;
+        color: #4D4D4D;
+        text-align: start;}
+}
+
+.bags__inner{
+    &--td{
+        height: 78px; 
+        @include screen(320px+1){
+            height: 38px; 
+        }
+    }
+    @include screen(320px+1){
+        
+         /* height: 30px; */
+         font-family: Open Sans;
+         font-style: normal;
+         font-weight: normal;
+         font-size: 15px;
+         line-height: 150%;
+         /* text-align: center; */
+         letter-spacing: 0.01em;
+         color: #000000;
+         text-align: start;
+    }
+    /* tr */
+       
+}

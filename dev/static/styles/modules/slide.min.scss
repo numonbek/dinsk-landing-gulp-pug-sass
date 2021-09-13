@@ -1,0 +1,171 @@
+// .productinfo__slide {
+//     margin: 0;
+//     padding: 0;
+//     overflow: hidden;
+// }
+  
+.productinfo__slide--items {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+  
+}
+  
+.productinfo__slide--items .productinfo__slide--items-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 299px;
+    height: 397px;
+    // border-radius: 50%;
+    // overflow: hidden;
+    transition: all 300ms ease-in-out;
+    z-index: -1;
+    opacity: 0;
+    @include screen(1024px+1){       
+        width: 181px;
+        height: 274px;      
+    }
+}
+  
+.productinfo__slide--items-item>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: green;
+}
+  
+.productinfo__slide--items-item.active {
+    opacity: 1;
+    z-index: 99;
+    box-shadow: 0px 0px 105px -35px rgba(0, 0, 0, 0.75);
+    width: 327px;
+    height: 458px;
+    @include screen(1024px+1){      
+        width: 236px;
+        height: 314px;
+    }
+}
+  
+.productinfo__slide--items-item.prev {
+    z-index: 2;
+    opacity: 0.25;
+    transform: translate(-125%, -50%);
+    display: none;
+}
+  
+.productinfo__slide--items-item.next {
+    z-index: 2;
+    opacity: 0.25;
+    transform: translate(-12%, -50%);
+    display: block;
+    
+}
+  
+.productinfo__slide--items .button-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 275px;
+    z-index: 100;
+    display: flex;
+    bottom: 0;
+}
+
+.button-slider-container {
+    position: absolute;
+    padding-top: 20px;
+    bottom: 0;
+    z-index: 1000;
+    display: flex;
+    left: 51px;
+    bottom: -50px;
+    width: 153px;
+    height: 67px;
+    bottom: -85px;
+    display: flex;
+    justify-content: space-between;
+    @include screen(1024px+1){       
+        z-index: 1000;      
+        left: 94px;
+        width: 107px;       
+        bottom: -12px;     
+    }
+    @include screen(480px+1){       
+        z-index: 1000;
+        left: 112px;
+        width: 153px;
+        bottom: -41px;     
+    }
+    @include screen(320px+1){
+        left: 44px;
+     }
+
+}
+  
+.button-container .button {
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+    //position: relative;
+    //opacity: 0.75;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 300ms ease-in-out;
+    
+ 
+}
+  
+.button-container .button:hover {
+    //opacity: 1;
+}
+  
+.button-container .button {
+    content: "";
+    background: url("../img/icon-back.svg");
+    top: 50%;
+    left: 50%;
+    //transform: translate(-50%, -50%);
+    width: 67px;
+    height: 67px;
+    border-radius: 50%;
+    z-index: -99;
+    //background: rgba(24, 24, 24, 0.1);
+    background: #FAFAFA;
+    border: none;
+    .icon {
+        fill: #3B7B3A;
+        &:hover {
+            fill: #3B7B3A;
+        }
+    }
+    @include screen(1024px+1){ 
+        top: 50%;
+        left: 50%;
+        width: 46px;
+        height: 46px;     
+        }
+    @include screen(480px+1){
+        top: 50%;
+        left: 50%;
+        width: 67px;
+        height: 67px;
+    }
+}
+
+.button-container {
+    .slide-btn_disabled {
+        background: rgba(24, 24, 24, 0.1);
+        .icon {
+            fill: #477046;
+            &:hover {
+                fill: #477046;
+            }
+        }
+    }
+}

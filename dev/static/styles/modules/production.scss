@@ -1,0 +1,79 @@
+.production{
+    max-width: $content;
+    margin: 0 auto 72px auto;
+    @include screen(320px+1){
+        margin: 0 auto 36px;
+    }
+}
+
+#pr{ @include screen(320px+1){
+        
+}
+    max-width: 701px;
+    padding-right: 11px;
+    padding-left: 11px;
+
+}
+#pd{ 
+    @include screen(320px+1){
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+
+    text-align: center;
+    letter-spacing: 0.01em;
+
+    /* Black */
+
+    color: #181818;
+
+    opacity: 0.8; 
+    padding: 0 0.5px;
+}
+   
+}
+
+.pm{ 
+    @include screen(320px+1){
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 110%;
+    /* or 13px */
+
+   
+    align-items: center;
+    text-align: center;
+    letter-spacing: 2.26px;
+    text-transform: uppercase;
+
+    /* Black */
+
+    color: #181818; 
+}
+    
+}
+.pt{
+    @include screen(320px+1){
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 130%;
+        /* or 26px */
+    
+        text-align: center;
+        letter-spacing: -0.24px;
+    
+        /* Black */
+    
+        color: #181818;
+        margin: 0;
+    }
+    
+}

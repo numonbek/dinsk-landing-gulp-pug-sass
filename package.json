@@ -1,0 +1,61 @@
+{
+  "name": "web-gulp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp testJS & gulp testScss"
+  },
+  "author": "Salamatin Anatoliy",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.14.5",
+    "browser-sync": "^2.26.14",
+    "del": "^6.0.0",
+    "fs": "0.0.1-security",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-better-rollup": "^4.0.1",
+    "gulp-cheerio": "^1.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-data": "^1.3.1",
+    "gulp-eslint": "^6.0.0",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-replace": "^1.1.3",
+    "gulp-sass": "^4.1.0",
+    "gulp-stylelint": "^13.0.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-svgmin": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp.spritesmith": "^6.12.1",
+    "merge-stream": "^2.0.0",
+
+    "rollup": "^2.56.3",
+
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-recommended-scss": "^4.2.0",
+    "stylelint-scss": "^3.19.0",
+    "vinyl-buffer": "^1.0.1",
+    "yargs": "^17.0.1"
+  },
+  "browserslist": [
+    "last 4 versions"
+  ],
+  "dependencies": {
+    "bootstrap-icons": "^1.5.0",
+    "gulp-include": "^2.4.1",
+    "inputmask": "^5.0.6",
+    "normalize.css": "^8.0.1",
+    "svg4everybody": "^2.1.9",
+    "validate.js": "^0.13.1"
+  }
+}

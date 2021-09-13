@@ -1,0 +1,178 @@
+.firstpage{
+    display: flex;
+    // flex-shrink: 0;
+    max-width: $content;
+    margin: 0 auto;
+    align-items: center;
+    margin-bottom: 180px; 
+  
+    justify-content: space-between;
+
+
+    @include screen(1280px+1){
+        padding: 0 15px;
+    }   
+    @include screen(1024px+1){
+        margin-bottom: 95px; 
+    }
+    @include screen(768px+1){
+        margin-bottom: 85px; 
+    }
+    @include screen(480px+1){
+        padding: 0 15px;
+        flex-wrap: wrap-reverse;
+    }
+    @include screen(320px+1){
+        padding: 0 15px;       
+        margin-bottom: 56px;
+    }
+
+    &__item{
+        width: 700px;
+        // width: 100%;
+        
+        font-family: 'Open Sans', sans-serif;
+        align-items: center;
+        @include screen(1024px+1){
+            width: 600px;
+        }
+        @include screen(1024px+1){
+            width: 610px;
+        }  
+        @include screen(480px+1){
+            width: 480px;
+            text-align: center;          
+        }
+        @include screen(320px+1){
+            width: 296px;
+            text-align: center;          
+        }
+        // margin-right: 163px;
+
+        &--text{
+            font-size: 62px;
+            font-weight: 700;
+            margin-bottom: 32px;
+            line-height: 74.4px;
+            @include screen(1024px+1){
+                font-size: 49px;
+                margin-bottom: 20px;
+                line-height: 60.4px;
+            }
+            @include screen(768px+1){
+                font-size: 36px;
+                margin-bottom: 20px;
+                line-height: 46.4px;
+            }
+            @include screen(320px+1){
+                font-size: 28px;
+                margin-bottom: 20px;
+                line-height: 120%;
+            }
+        }
+        &--description{
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 27px;
+            margin-bottom: 48px;
+            padding-right: 188px;
+            letter-spacing: 0.01em;
+            color: #181818;
+            opacity: 0.8;
+            @include screen(1024px+1){
+                font-size: 14px;              
+                line-height: 23px;
+                margin-bottom: 36px;
+                padding-right: 141px;
+                letter-spacing: .01em;
+            }
+            @include screen(768px+1){
+                font-size: 12px;
+                line-height: 19px;
+                margin-bottom: 35px;
+                padding-right: 124px;           
+            }
+            @include screen(480px+1){
+                font-size: 16px;
+                line-height: 150%;
+                margin-bottom: 35px;
+                padding: 0 12px;           
+            }
+            @include screen(320px+1){
+                font-size: 16px;
+                line-height: 150%;
+                margin-bottom: 28px;
+                padding: 0px 7px;       
+            }
+        }
+     
+        button{
+            font-family: 'Roboto', sans-serif;
+            background-color: $green;
+            border: none;
+            border-radius: 5px;
+            width: 220px;
+            height: 60px;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            &.firstpage--button:hover{
+                // transition: all 0.9s ease;
+                color: #3B7B3A;
+                background-color: white;
+                border: 3px solid #3B7B3A;
+                box-shadow: 0px 0px 4px 4px;
+                transition: all 0.6s linear;
+                opacity: 1;
+
+            }
+            @include screen(1024px+1){
+                width: 199px;
+                height: 52px;
+               
+            }
+            @include screen(1024px+1){
+                width: 176px;
+                height: 44px;               
+            }
+            @include screen(480px+1){
+                width: 296px;
+                height: 60px;             
+            }
+            @include screen(320px+1){
+                width: 296px;
+                height: 60px;           
+            }
+            
+
+        }
+    }
+}
+.firstpage__photo{
+    max-width: 557px;
+    width: 100%;
+    max-height: 578px;
+    &>img{
+        width: 100%;
+    }
+    @include screen(1280px+1){
+        width: 457px;
+        height: 478px;
+    }
+    @include screen(1024px+1){
+        width: 357px;
+        height: 353px;
+    }
+    @include screen(480px+1){
+        width: 307px;
+        height: 323px;
+        margin: 0 auto 30px auto;
+    }
+    @include screen(320px+1){
+        width: 196px;
+        height: 199px;
+        margin: 0 auto 30px;
+    }
+}

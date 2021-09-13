@@ -1,0 +1,81 @@
+.ourcertificate{
+    margin: 0 auto 180px auto;
+    &__title{
+        display: block;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 44px;
+        line-height: 120%;
+        /* identical to box height, or 53px */
+    
+        text-align: center;
+        letter-spacing: 0.01em;
+    
+        color: #262626;
+        margin-bottom: 60px ;
+        @include screen(320px+1){
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 130%;
+            /* identical to box height, or 26px */
+    
+            text-align: center;
+            letter-spacing: -0.24px;
+    
+            color: #262626;
+        }
+    }
+    &__photo{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+        &-column{
+            width: 276px;
+           
+            height: 349px;
+            
+            background: #F2F2F2;
+            border-radius: 10px;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            // margin-right: 21.5px;
+            margin-bottom: 10px;              
+            cursor: pointer;
+            &>img{
+                max-width: 80%;
+            }
+            &:not(:last-child){
+                margin-right: 15px;
+            }
+            @include screen(768px+1){
+                width: 221px;
+                height: 293px;
+                
+            }
+            &:last-child{
+                @include screen(320px+1){
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+    @include screen(1024px+1){
+        margin: 0 auto 79px auto;
+    }
+    @include screen(768px+1){
+        margin: 0 auto 40px auto;
+    }
+}
+
+
