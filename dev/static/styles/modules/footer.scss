@@ -1,5 +1,9 @@
 .footer{
     display:flex;
+    @include screen(576px+1){
+        flex-wrap:wrap-reverse;
+        height: 100%;
+    }
     @include screen(480px+1){
         flex-wrap:wrap-reverse;
         height: 100%;
@@ -308,5 +312,24 @@
     }
 }
 
+
+/* map */
+
+#map {
+    width: 100%; 
+    height: 100%; 
+    @include screen(576px+1){
+        width: 100%; 
+        height: 331px;
+    }
+    @include screen(480px+1){
+        width: 100%; 
+        height: 231px; 
+    }
+    @include screen(320px+1){
+        width: 100%; 
+        height: 231px; 
+    }
+}
 
 

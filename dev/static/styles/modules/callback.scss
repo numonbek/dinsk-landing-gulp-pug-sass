@@ -33,15 +33,24 @@ form{
 .form{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     padding-bottom: 83.77px;
+    padding-left: 10px;
+    padding-right: 10px;
     &__buttons{
-        margin: 0 auto;
+        text-align: center;
+        @include screen(600px+1){       
+            width: 100%;
+               
+         
+        }
+        
     }
     &__inputs{
         margin-bottom: 30px;
         text-align: center;
         display: flex;
+        
         @include screen(1280px+1){
             margin: 0 auto 30px auto;
         }
@@ -70,21 +79,28 @@ form{
     border-radius: 0;
     border-bottom: 2px solid #FAFAFA;
     opacity: 0.7;
-    margin-right: 44px;
+    
+
+    
     @include screen(1024px+1){       
         width: 276px;
         height: 56px;      
-        margin-right: 36px;
+     
+    }
+    @include screen(600px+1){       
+        width: 100%;
+        height: 56px;      
+     
     }
     @include screen(480px+1){       
-        width: 400px;
+        // width: 400px;
         height: 56px;      
-        margin-right: 36px;
+      
     }
     @include screen(320px+1){       
-        width: 300px;
+        // width: 300px;
         height: 59px;
-        margin-right: 36px;
+     
     }
     
 }
@@ -134,12 +150,16 @@ button{
         width: 204px;
         height: 54px;
       }
+      @include screen(600px+1){
+        width: 100%;
+        height: 54px;
+      }
       @include screen(480px+1){
-        width: 400px;
+        // width: 400px;
         height: 54px;
       }
       @include screen(320px+1){
-        width: 300px;
+        // width: 300px;
         height: 60px;
       }
     }
@@ -215,6 +235,14 @@ button{
 .form-group {
     display: flex;
     flex-direction: column;
+    padding-right: 36px;
+    @include screen(600px+1 ){
+       width: 100%;
+       padding: 0 ;
+    }
+    // &:not(:last-child){
+    //     margin-right: 36px;
+    // }
 }
    
 .form-error-msg{
